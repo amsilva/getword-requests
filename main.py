@@ -1,7 +1,8 @@
 import requests
 
 # URL da sua API
-url = 'http://localhost:5000/get'  # Altere se necessário
+##url = 'http://localhost:5000/simple-get'  # Altere se necessário
+url = 'http://localhost:5000/complex-get'  # Altere se necessário
 
 def get_message():
     try:
@@ -10,6 +11,8 @@ def get_message():
         data = response.json()  # Converte a resposta para JSON
         print("Mensagem recebida, data:", data)
         print("Mensagem recebida, data['palavra']:", data['palavra'])
+        print("Mensagem recebida, data['categoria']:", data['categoria'])
+        print("Mensagem recebida, data['complexidade']:", data['complexidade'])
 
     except requests.exceptions.RequestException as e:
         print("Erro ao acessar a API:", e)
