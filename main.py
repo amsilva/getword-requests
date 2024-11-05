@@ -1,9 +1,10 @@
 import requests
 
 # URL da sua API
-##url = 'http://localhost:5000/simple-get'  # Altere se necessário
-#url = 'http://localhost:5000/complex-get'  # Altere se necessário
-url = "https://faccamp.pythonanywhere.com/complex-get"
+
+#url = 'http://localhost:5000/wlist/get'  # Altere se necessário
+#url = 'http://localhost:5000/wlist/getfull'  # Altere se necessário
+url = "https://faccamp.pythonanywhere.com/wlist/get"
 
 def get_message():
     try:
@@ -13,8 +14,8 @@ def get_message():
         
         print("Mensagem recebida, COMPLETA:", data)
         print("Mensagem recebida, PALAVRA:", data['palavra'])
-        print("Mensagem recebida, CATEGORIA:", data['categoria'])
-        print("Mensagem recebida, COMPLEXIDADE:", data['complexidade'])
+        ##print("Mensagem recebida, CATEGORIA:", data['categoria'])
+        ##print("Mensagem recebida, COMPLEXIDADE:", data['complexidade'])
 
     except requests.exceptions.RequestException as e:
         print("Erro ao acessar a API:", e)
